@@ -262,7 +262,7 @@ void answer_2(string& bus_stop, pair<int, int> from, pair<int, int> to, string& 
 	vector<string> new_vector;
 	query(&new_vector, bus_stop, from, to, line);
 	double p = 1.0 * new_vector.size() / sum_of_sizes;
-	cout << "The probability, that the next bus arriving is the bus you have seleted from the" << endl;
+	cout << "The probability, that the next bus arriving is the bus you have selected from the" << endl;
 	cout << "list, equals ";
 	if (new_vector.size() == 0) cout << "0." << endl;
 	else cout << std::fixed << std::setprecision(2) << p << "." << endl;
@@ -313,19 +313,19 @@ void answer_4(string& bus_stop, pair<int, int> from, pair<int, int> to, string l
 		vector<string> new_vector;
 		query(&new_vector, bus_stop, from, to, linie[i]);
 		double res = 1.0 * time / new_vector.size();
-		for (size_t j = 1; j < linie[j].size(); j++) cout << linie[i][j];
+		for (size_t j = 1; j < linie[i].size(); j++) cout << linie[i][j];
 		if (new_vector.size() != 0 && new_vector.size() != 1)
-			cout << " :   ariving every " << (int)(round(res)) << " minutes" << endl;
+			cout << " :   arriving every " << (int)(round(res)) << " minutes" << endl;
 		else if (new_vector.size() == 1)
-			cout << " :   ariving less often than every " << (int)(round(res)) << " minutes" << endl;
+			cout << " :   arriving less often than every " << (int)(round(res)) << " minutes" << endl;
 		else
 			cout << " :   not arriving during this period of time" << endl;
 		sum_of_sizes += new_vector.size();
 		i++;
 	}
 	double res = 1.0 * time / sum_of_sizes;
-	if (sum_of_sizes != 0 && sum_of_sizes != 1) cout << "any line :   ariving every " << (int)(round(res)) << " minutes" << endl;
-	else if (sum_of_sizes == 1) cout << " :   ariving less often than every " << (int)(round(res)) << " minutes" << endl;
+	if (sum_of_sizes != 0 && sum_of_sizes != 1) cout << "any line :   arriving every " << (int)(round(res)) << " minutes" << endl;
+	else if (sum_of_sizes == 1) cout << " :   arriving less often than every " << (int)(round(res)) << " minutes" << endl;
 	else cout << "any line :   not arriving during this period of time" << endl;
 
 	cout << "Press 'Enter' to continue..." << endl;
@@ -561,23 +561,23 @@ void option_0() {
 }
 
 int main() {
-	cout << "Welcome to ZTM Checker!" << endl << endl;
+	cout << endl << "Welcome to ZTM Checker!" << endl << endl;
 
 	while (true) {
 		int number;
 
-		cout << "Choose an option from the list below by typying number from 1 to 7." << endl;
+		cout << "Choose an option from the list below by typing number from 0 to 6." << endl;
 		cout << "(1) average waiting time for a bus/tram depending on an hour (from, to), a bus" << endl;
 		cout << "    stop and a bus line" << endl;
 		cout << "(2) probability of coming across the specific bus/tram line depending on hour" << endl;
 		cout << "    (in 1 hour time)" << endl;
 		cout << "(3) all upcoming connections (in 1 hour time) from the specific bus stop " << endl;
-		cout << "(4) frequency of bus arriving (averagely) on the specific bus stop depending on" << endl;
+		cout << "(4) frequency of bus arriving (on average) on the specific bus stop depending on" << endl;
 		cout << "    an hour (in 1 hour time)" << endl;
 		cout << "(5) list of bus/tram lines depending on the specific bus stop" << endl;
 		cout << "(6) timetable of a bus/tram depending on a bus stop and a bus line" << endl;
-		cout << "(0) update the hole database (attention: may take several minutes!)" << endl;
-		cout << "My choise is:   ";
+		cout << "(0) update the whole database (attention: may take several minutes!)" << endl;
+		cout << "My choice is:   ";
 
 		read_parse_int(&number);
 
