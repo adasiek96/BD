@@ -1,0 +1,16 @@
+Made by Adam Sobecki
+
+Program called 'ZTM Checker' let you introduce the timetable of Warsaw buses (ZTM).
+
+How to compile and run:
+
+unzip as371793
+cd as371793
+pyvenv BD
+source BD/bin/activate
+pip install --upgrade pip
+pip install requests
+./make
+
+To clean temporary files and databases, run:
+./clean

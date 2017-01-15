@@ -1,0 +1,19 @@
+#!/bin/bash
+if [ ! -f "status.txt" ]; then
+	mkdir tmp
+	echo "The databases are being downloaded. It may take up to 30 minutes."
+	echo "Be patient, please..."
+	python download.py > log.txt
+	if [ -f "status.txt" ]; then
+		echo "Databases downloaded successfully!"
+		gcc -c sqlite3.c -o sqlite3.o
+		g++ main.cpp sqlite3.o -std=c++14 -lpthread -ldl -o main
+		./main
+	else
+		rm -r -f tmp
+		rm -f main sqlite3.o status.txt log.txt
+		echo "Error while downloading databases."
+	fi
+else
+	./main
+fi
