@@ -4,7 +4,7 @@ Program called 'ZTM Checker' let you introduce the timetable of Warsaw buses (ZT
 
 How to compile and run:
 
-unzip as371793
+unzip as371793.zip
 cd as371793
 pyvenv BD
 source BD/bin/activate
