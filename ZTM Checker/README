@@ -10,7 +10,11 @@ pyvenv BD
 source BD/bin/activate
 pip install --upgrade pip
 pip install requests
+
+Add your API key to file download.py (you can get one from site: https://api.um.warszawa.pl)
+
+To run the programme:
 ./make
 
-To clean temporary files and databases, run:
+To clean temporary files and databases:
 ./clean

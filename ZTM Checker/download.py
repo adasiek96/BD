@@ -39,7 +39,7 @@ def parse(p0, p1, p2, p3, p4):
     
     # STAŁE
     LINK = 'https://api.um.warszawa.pl/api/action/dbtimetable_get/?'
-    API_KEY = '&apikey=3125d699-f402-4c5f-afa0-74391dde22d5'
+    API_KEY = '&apikey=' # add your own API key after '='
 
     if (nr == 1):
         ID_1 = 'id=b27f4c17-5c50-4a5b-89dd-236b282bc499'
